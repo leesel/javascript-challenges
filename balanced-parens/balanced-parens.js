@@ -2,7 +2,7 @@
 //   return false
 // }
 
-var isValid = function (s) {
+var parensAreBalanced = function (input) {
 
   const obj = {
     "(": ")",
@@ -12,7 +12,7 @@ var isValid = function (s) {
 
   const stack = [];
 
-  for (const paran of s) {
+  for (const paran of input) {
     if (obj.hasOwnProperty(paran)) {
       stack.push(paran)
     } else {
@@ -26,6 +26,6 @@ var isValid = function (s) {
   return stack.length === 0;
 };
 
-console.log(isValid('([)'));
+console.log(parensAreBalanced('([)'));
 
 module.exports = parensAreBalanced
