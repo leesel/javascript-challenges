@@ -1,9 +1,4 @@
-// const parensAreBalanced = (input) => {
-//   return false
-// }
-
-var parensAreBalanced = function (input) {
-
+const parensAreBalanced = (input) => {
   const obj = {
     "(": ")",
     "{": "}",
@@ -24,7 +19,7 @@ var parensAreBalanced = function (input) {
   }
 
   return stack.length === 0;
-};
+}
 
 console.log(parensAreBalanced('([)'));
 
